@@ -1,0 +1,14 @@
+D:\ADO.NET\Project3\bin\Debug\Project3.exe.config
+D:\ADO.NET\Project3\bin\Debug\Project3.exe
+D:\ADO.NET\Project3\bin\Debug\Project3.pdb
+D:\ADO.NET\Project3\bin\Debug\EntityFramework.dll
+D:\ADO.NET\Project3\bin\Debug\EntityFramework.SqlServer.dll
+D:\ADO.NET\Project3\bin\Debug\EntityFramework.xml
+D:\ADO.NET\Project3\bin\Debug\EntityFramework.SqlServer.xml
+D:\ADO.NET\Project3\obj\Debug\Project3.csproj.AssemblyReference.cache
+D:\ADO.NET\Project3\obj\Debug\Project3.Form1.resources
+D:\ADO.NET\Project3\obj\Debug\Project3.Properties.Resources.resources
+D:\ADO.NET\Project3\obj\Debug\Project3.csproj.GenerateResource.cache
+D:\ADO.NET\Project3\obj\Debug\Project3.csproj.CoreCompileInputs.cache
+D:\ADO.NET\Project3\obj\Debug\Project3.exe
+D:\ADO.NET\Project3\obj\Debug\Project3.pdb
