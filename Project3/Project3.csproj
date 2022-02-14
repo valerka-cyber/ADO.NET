@@ -65,6 +65,7 @@
     <Compile Include="model\Department.cs" />
     <Compile Include="model\FirmContext.cs" />
     <Compile Include="model\Manager.cs" />
+    <Compile Include="model\Sale.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
