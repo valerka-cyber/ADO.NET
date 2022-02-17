@@ -41,6 +41,8 @@ namespace Project3.Forms
             this.labelManagerID = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -156,11 +158,30 @@ namespace Project3.Forms
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(44, 171);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Дата";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(132, 171);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
             // ManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 297);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.labelManagerID);
@@ -195,5 +216,7 @@ namespace Project3.Forms
         private System.Windows.Forms.Label labelManagerID;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

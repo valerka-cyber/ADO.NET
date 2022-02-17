@@ -16,7 +16,9 @@ namespace Project3.model
 
         public override string ToString()
         {
-            return $"{Moment.ToShortDateString()} {Cnt} pcs {Id_Product.ToString().Substring(25)}-{Id_Manager.ToString().Substring(25)}";
+            // return $"{Moment.ToShortDateString()} {Cnt} pcs {Id_Product.ToString().Substring(25)}-{Id_Manager.ToString().Substring(25)}";
+            return $"{Moment}";
         }
+       
     }
 }

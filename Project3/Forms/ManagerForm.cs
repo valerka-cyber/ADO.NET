@@ -26,12 +26,12 @@ namespace Project3.Forms
             {
                 comboBoxProduct.Items.Add(product);
             }
-
+            textBoxCnt.Clear();
             comboBoxOff.Items.Clear();
             foreach(model.Manager manager in _Firm.Managers)
             {
                 comboBoxOff.Items.Add(manager);
-            }
+            }         
         }
 
         private void comboBoxProduct_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,5 +103,7 @@ namespace Project3.Forms
               as model.Manager;
             labelManagerID.Text = manager.Id.ToString();
         }
+
+       
     }
 }

@@ -20,5 +20,6 @@ namespace Project3.model
         {
             return $"  {Surname} {Name.Substring(0,1)}. {SecName.Substring(0, 1)}. ";
         }
+     
     }
 }
