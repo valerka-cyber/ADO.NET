@@ -7,13 +7,14 @@ using System.Data.Entity;
 
 namespace Project3.model
 {
-    class FirmContext : DbContext
+   public class FirmContext : DbContext
     {
         public DbSet<Manager> Managers { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Sale> Sales { get; set; }
-        private void AddDepartments()
+
+        public void AddDepartments()
         {
             Departments.Add(
                 new model.Department
@@ -123,30 +124,29 @@ namespace Project3.model
             Managers.Add(new Manager { Id = Guid.Parse("6FB5BCA3-2CAE-4450-AAB5-E0184FD45BE9"), Surname = "Ткаченко", Name = "Альбина", SecName = "Викторовна", Id_main_dep = Guid.Parse("415B36D9-2D82-4A92-A313-48312F8E18C6"), Id_sec_dep = null, Id_chief = null });
             SaveChanges();
         }
-        public void AddProducts()
-        {
-            Products.Add(new Model.Product { Id = Guid.Parse("DA1E17BB-A90D-4C79-B801-5462FB070F57"), Name = "Гвоздь 100мм", Price = 10.50 });
-            Products.Add(new Model.Product { Id = Guid.Parse("A8E6BE17-5447-4804-AB61-F31ABF5A76D3"), Name = "Шуруп 4х35", Price = 4.25 });
-            Products.Add(new Model.Product { Id = Guid.Parse("21B0F444-2E4F-47D8-80C1-E69BF1C34CA8"), Name = "Гайка М4", Price = 6.50 });
-            Products.Add(new Model.Product { Id = Guid.Parse("2DCA5E44-B06D-4613-BB6A-D3BC91430BFE"), Name = "Гровер М4", Price = 5.99 });
-            Products.Add(new Model.Product { Id = Guid.Parse("64A4DF8A-0733-4BE9-AABA-C01B4EC3612A"), Name = "Болт 4х60", Price = 9.98 });
-            Products.Add(new Model.Product { Id = Guid.Parse("B6D20749-B495-4B1A-BA1C-80B88E78B7CD"), Name = "Гвоздь 80мм", Price = 19.98 });
-            Products.Add(new Model.Product { Id = Guid.Parse("7B08197B-C55F-4389-891F-BF12A575DFFB"), Name = "Отвертка PZ2", Price = 35.50 });
-            Products.Add(new Model.Product { Id = Guid.Parse("870DA1A9-44F4-4018-B7FC-727A2058FAF0"), Name = "Шуруповерт", Price = 799 });
-            Products.Add(new Model.Product { Id = Guid.Parse("8FF90E21-DCDB-4D55-A557-7C6D57DBB029"), Name = "Молоток", Price = 216.50 });
-            Products.Add(new Model.Product { Id = Guid.Parse("F7F1E576-AF8D-4749-869E-4A794FE69D42"), Name = "Набор 'Новосел'", Price = 52.40 });
-            Products.Add(new Model.Product { Id = Guid.Parse("BB29F63D-1261-41F2-89E8-88F44D5EC409"), Name = "Сверло 6х80", Price = 39.98 });
-            Products.Add(new Model.Product { Id = Guid.Parse("D17A4442-0A71-4673-B450-36929048ADEF"), Name = "Шуруп 5х45", Price = 5.98 });
-            Products.Add(new Model.Product { Id = Guid.Parse("69B125D7-99CC-42D6-A6FA-46687F333749"), Name = "Винт 'потай' 3х16", Price = 3.98 });
-            Products.Add(new Model.Product { Id = Guid.Parse("94BC671A-A6B6-417A-BC9F-8AE4871A58EC"), Name = "Дюбель 6х60", Price = 5.50 });
-            Products.Add(new Model.Product { Id = Guid.Parse("EFC6578A-00B7-4766-A7E3-79CDBA8C294B"), Name = "Органайзер для шурупов", Price = 199 });
-            Products.Add(new Model.Product { Id = Guid.Parse("9654271B-AB52-4225-A30C-D75054B1733F"), Name = "Лазерный дальномер", Price = 1950 });
-            Products.Add(new Model.Product { Id = Guid.Parse("F2585221-1ACA-4EFE-A5E8-C2F4534D1F92"), Name = "Дрель электрическая", Price = 990 });
-            Products.Add(new Model.Product { Id = Guid.Parse("4A550D3B-D1F2-40EF-AE4E-963612C6713A"), Name = "Сварочный аппарат", Price = 2099 });
-            Products.Add(new Model.Product { Id = Guid.Parse("17DB11D1-F50E-4CF4-9C54-CF1BD45802EA"), Name = "Электроды 3мм", Price = 49.98 });
-            Products.Add(new Model.Product { Id = Guid.Parse("7264D33A-16B9-4E22-B3F1-63D6DAE60078"), Name = "Паяльник 40 Вт", Price = 199.98 });
-
+        public void AddProducts() {
+            Products.Add(new model.Product { Id = Guid.Parse("DA1E17BB-A90D-4C79-B801-5462FB070F57"), Name = "Гвоздь 100мм", Price = 10.50 });
+            Products.Add(new model.Product { Id = Guid.Parse("A8E6BE17-5447-4804-AB61-F31ABF5A76D3"), Name = "Шуруп 4х35", Price = 4.25 });
+            Products.Add(new model.Product { Id = Guid.Parse("21B0F444-2E4F-47D8-80C1-E69BF1C34CA8"), Name = "Гайка М4", Price = 6.50 });
+            Products.Add(new model.Product { Id = Guid.Parse("2DCA5E44-B06D-4613-BB6A-D3BC91430BFE"), Name = "Гровер М4", Price = 5.99 });
+            Products.Add(new model.Product { Id = Guid.Parse("64A4DF8A-0733-4BE9-AABA-C01B4EC3612A"), Name = "Болт 4х60", Price = 9.98 });
+            Products.Add(new model.Product { Id = Guid.Parse("B6D20749-B495-4B1A-BA1C-80B88E78B7CD"), Name = "Гвоздь 80мм", Price = 19.98 });
+            Products.Add(new model.Product { Id = Guid.Parse("7B08197B-C55F-4389-891F-BF12A575DFFB"), Name = "Отвертка PZ2", Price = 35.50 });
+            Products.Add(new model.Product { Id = Guid.Parse("870DA1A9-44F4-4018-B7FC-727A2058FAF0"), Name = "Шуруповерт", Price = 799 });
+            Products.Add(new model.Product { Id = Guid.Parse("8FF90E21-DCDB-4D55-A557-7C6D57DBB029"), Name = "Молоток", Price = 216.50 });
+            Products.Add(new model.Product { Id = Guid.Parse("F7F1E576-AF8D-4749-869E-4A794FE69D42"), Name = "Набор 'Новосел'", Price = 52.40 });
+            Products.Add(new model.Product { Id = Guid.Parse("BB29F63D-1261-41F2-89E8-88F44D5EC409"), Name = "Сверло 6х80", Price = 39.98 });
+            Products.Add(new model.Product { Id = Guid.Parse("D17A4442-0A71-4673-B450-36929048ADEF"), Name = "Шуруп 5х45", Price = 5.98 });
+            Products.Add(new model.Product { Id = Guid.Parse("69B125D7-99CC-42D6-A6FA-46687F333749"), Name = "Винт 'потай' 3х16", Price = 3.98 });
+            Products.Add(new model.Product { Id = Guid.Parse("94BC671A-A6B6-417A-BC9F-8AE4871A58EC"), Name = "Дюбель 6х60", Price = 5.50 });
+            Products.Add(new model.Product { Id = Guid.Parse("EFC6578A-00B7-4766-A7E3-79CDBA8C294B"), Name = "Органайзер для шурупов", Price = 199 });
+            Products.Add(new model.Product { Id = Guid.Parse("9654271B-AB52-4225-A30C-D75054B1733F"), Name = "Лазерный дальномер", Price = 1950 });
+            Products.Add(new model.Product { Id = Guid.Parse("F2585221-1ACA-4EFE-A5E8-C2F4534D1F92"), Name = "Дрель электрическая", Price = 990 });
+            Products.Add(new model.Product { Id = Guid.Parse("4A550D3B-D1F2-40EF-AE4E-963612C6713A"), Name = "Сварочный аппарат", Price = 2099 });
+            Products.Add(new model.Product { Id = Guid.Parse("17DB11D1-F50E-4CF4-9C54-CF1BD45802EA"), Name = "Электроды 3мм", Price = 49.98 });
+            Products.Add(new model.Product { Id = Guid.Parse("7264D33A-16B9-4E22-B3F1-63D6DAE60078"), Name = "Паяльник 40 Вт", Price = 199.98 });
             SaveChanges();
         }
+
     }
 }
