@@ -37,6 +37,7 @@ namespace Project3
             this.genCnt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_sale = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grou_sale = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@ namespace Project3
             this.add_managers = new System.Windows.Forms.Button();
             this.add_dep = new System.Windows.Forms.Button();
             this.add_product = new System.Windows.Forms.Button();
-            this.button_sale = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,6 +82,7 @@ namespace Project3
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(329, 251);
             this.listBox1.TabIndex = 1;
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // button2
             // 
@@ -143,6 +144,16 @@ namespace Project3
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // button_sale
+            // 
+            this.button_sale.Location = new System.Drawing.Point(0, 57);
+            this.button_sale.Name = "button_sale";
+            this.button_sale.Size = new System.Drawing.Size(112, 31);
+            this.button_sale.TabIndex = 16;
+            this.button_sale.Text = "Оформить";
+            this.button_sale.UseVisualStyleBackColor = true;
+            this.button_sale.Click += new System.EventHandler(this.button_sale_Click);
             // 
             // button5
             // 
@@ -344,16 +355,6 @@ namespace Project3
             this.add_product.Text = "товар";
             this.add_product.UseVisualStyleBackColor = true;
             this.add_product.Click += new System.EventHandler(this.add_product_Click);
-            // 
-            // button_sale
-            // 
-            this.button_sale.Location = new System.Drawing.Point(0, 57);
-            this.button_sale.Name = "button_sale";
-            this.button_sale.Size = new System.Drawing.Size(112, 31);
-            this.button_sale.TabIndex = 16;
-            this.button_sale.Text = "Оформить";
-            this.button_sale.UseVisualStyleBackColor = true;
-            this.button_sale.Click += new System.EventHandler(this.button_sale_Click);
             // 
             // button1
             // 

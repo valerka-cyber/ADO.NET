@@ -81,6 +81,18 @@
     <Compile Include="Forms\AddManForm.Designer.cs">
       <DependentUpon>AddManForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditedDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditedDepartment.Designer.cs">
+      <DependentUpon>EditedDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditManager.Designer.cs">
+      <DependentUpon>EditManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +117,23 @@
     <Compile Include="Forms\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditedProductForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditedProductForms.Designer.cs">
+      <DependentUpon>EditedProductForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SaleForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SaleForm.Designer.cs">
       <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditedSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditedSale.Designer.cs">
+      <DependentUpon>EditedSale.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202202091715154_Init.cs" />
     <Compile Include="Migrations\202202091715154_Init.designer.cs">
@@ -141,6 +165,15 @@
     <EmbeddedResource Include="Forms\AddManForm.resx">
       <DependentUpon>AddManForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditedDepartment.resx">
+      <DependentUpon>EditedDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditedSale.resx">
+      <DependentUpon>EditedSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditManager.resx">
+      <DependentUpon>EditManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditedProductForms.resx">
+      <DependentUpon>EditedProductForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>

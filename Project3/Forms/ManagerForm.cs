@@ -70,6 +70,7 @@ namespace Project3.Forms
                 MessageBox.Show("Кол-во должно быть больше нуля");
                 return;
             }
+
             _Firm.Sales.Add(new model.Sale
             {
                 Id = Guid.NewGuid(),

@@ -62,3 +62,7 @@ C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.
 C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.csproj.CoreCompileInputs.cache
 C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.exe
 C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.pdb
+C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.Forms.EditedProductForms.resources
+C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.Forms.EditedDepartment.resources
+C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.Forms.EditManager.resources
+C:\Users\Valerii\source\repos\valerka-cyber\ADO.NET\Project3\obj\Debug\Project3.Forms.EditedSale.resources

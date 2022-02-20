@@ -37,34 +37,39 @@ namespace Project3
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //departmen
             listBox1.Items.Clear();
 
             foreach (var dep in
-            Firm.Departments.OrderBy(d => Name))
+                Firm.Departments.OrderBy(d => d.Name))
             {
-                listBox1.Items.Add(dep.Id + "\t " + dep.Name);
+                listBox1.Items.Add(dep);
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //manager
             listBox1.Items.Clear();
 
             foreach (var man in
-            Firm.Managers.OrderBy(a => Name))
+                     Firm.Managers.OrderBy(d => d.Name))
             {
-                listBox1.Items.Add(man.Id + "\t " + man.Name + " " + man.Surname + " " +  man.SecName + " " + man.Id_main_dep + "\t " + man.Id_sec_dep + "\t " + man.Id_chief);
+                listBox1.Items.Add(man);
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            //product
+            var query = Firm.Products
+              .Where(p => p.Price > 0)
+              .OrderByDescending(p => p.Price);
 
-            foreach (var pro in
-            Firm.Products.OrderBy(a => Name))
+            listBox1.Items.Clear();
+            foreach (model.Product p in query)
             {
-                listBox1.Items.Add(pro.Id + "\t " +pro.Name + "\t " + pro.Price);
+                listBox1.Items.Add(p);
             }
         }
 
@@ -123,7 +128,13 @@ namespace Project3
 
         private void button5_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
 
+            foreach (var sal in
+                     Firm.Sales.OrderBy(d => d.Cnt))
+            {
+                listBox1.Items.Add(sal);
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -238,5 +249,97 @@ namespace Project3
           .ShowDialog(this);
             grou_man.Text = Firm.Managers.Count().ToString();
         }
+
+      
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            int selectedIndex = listBox1.SelectedIndex;
+            if (selectedIndex == -1) return;
+
+            if(listBox1.SelectedItem is model.Product)
+            {
+                Forms.EditedProductForms editedProductForm =
+                    Program.Container.Resolve<Forms.EditedProductForms>();
+                editedProductForm.EditedProduct =
+                listBox1.SelectedItem as model.Product;
+
+                editedProductForm.ShowDialog(this);
+                //String str = editedProductForm.EditedProduct.ToString()
+                //        + "  " + Firm.Products.Find(
+                //          editedProductForm.EditedProduct.Id).ToString();
+
+                if (editedProductForm.DialogResult == DialogResult.OK)
+                {
+                    Firm.SaveChanges();
+                    MessageBox.Show("Изменения внесены");
+                }
+                else
+                {
+                    MessageBox.Show("Изменения отменены");
+                }
+
+            }
+           else if (listBox1.SelectedItem is model.Department)
+            {
+                Forms.EditedDepartment editedDepartmen =
+                    Program.Container.Resolve<Forms.EditedDepartment>();
+                editedDepartmen.EditDepartment =
+                listBox1.SelectedItem as model.Department;
+
+                editedDepartmen.ShowDialog(this);            
+
+                if (editedDepartmen.DialogResult == DialogResult.OK)
+                {
+                    Firm.SaveChanges();
+                    MessageBox.Show("Изменения внесены");
+                }
+                else
+                {
+                    MessageBox.Show("Изменения отменены");
+                }
+            }
+
+            else if (listBox1.SelectedItem is model.Manager)
+            {
+                Forms.EditManager editedManager =
+                    Program.Container.Resolve<Forms.EditManager>();
+                editedManager.EditedManager =
+                listBox1.SelectedItem as model.Manager;
+
+                editedManager.ShowDialog(this);
+
+                if (editedManager.DialogResult == DialogResult.OK)
+                {
+                    Firm.SaveChanges();
+                    MessageBox.Show("Изменения внесены");
+                }
+                else
+                {
+                    MessageBox.Show("Изменения отменены");
+                }
+            }
+
+            else if (listBox1.SelectedItem is model.Sale)
+            {
+                Forms.EditedSale editSale =
+                    Program.Container.Resolve<Forms.EditedSale>();
+                editSale.EditSale =
+                listBox1.SelectedItem as model.Sale;
+
+                editSale.ShowDialog(this);
+
+                if (editSale.DialogResult == DialogResult.OK)
+                {
+                    Firm.SaveChanges();
+                    MessageBox.Show("Изменения внесены");
+                }
+                else
+                {
+                    MessageBox.Show("Изменения отменены");
+                }
+            }
+        }
+    
     }
 }
